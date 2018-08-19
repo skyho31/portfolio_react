@@ -57,28 +57,30 @@ class HistoryList extends React.Component {
 		}
 
 		return this.state.isDesktop? (
-			<div style={containerStyle}>
-				<div className="historyList" style={!isRight ? emptyStyle : {}}>
-					<ul>
-						{ history.map((value, index) => {
-							return isRight ?  (
-								<li style={{textAlign:'right'}}  key={index}>
-									{value.content}
-									<p className="listYear left">{value.time}</p>
-								</li>
-							) : (
-								<li key={index}>
-									<p className="listYear right">{value.time}</p>
-									{value.content}
-								</li>
-							)
-						})}
-					</ul>
-				</div>
-				<div className="emptyList" style={isRight ? Object.assign({}, emptyStyle, {borderLeftColor:"cornflowerblue"}) : {}}/>
-			</div>
+        <div style={containerStyle}>
+          <Circle isDesktop={this.state.isDesktop}/>
+          <div className="historyList" style={!isRight ? emptyStyle : {}}>
+            <ul>
+              { history.map((value, index) => {
+                return isRight ?  (
+                  <li style={{textAlign:'right'}}  key={index}>
+                    {value.content}
+                    <p className="listYear left">{value.time}</p>
+                  </li>
+                ) : (
+                  <li key={index}>
+                    <p className="listYear right">{value.time}</p>
+                    {value.content}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+          <div className="emptyList" style={isRight ? emptyStyle : {}}/>
+        </div>
 		) : (
 			<div style={{display:'flex'}}>
+        <Circle isDesktop={this.state.isDesktop}/>
 				<div className="historyList" style={Object.assign(emptyStyle, {margin:"0 2em"})}>
 					<ul>
 						{
@@ -94,6 +96,16 @@ class HistoryList extends React.Component {
 			</div>
 		)
 	}
+}
+
+const Circle = ({isDesktop}) => {
+  const style = isDesktop ?  {left: "calc(50% - 6px)"} : {left: "calc(2em - 6px)"};
+  
+  return (
+    <div style={{display:'flex'}}>
+        <span className="hisCircle" style={style}></span>
+    </div>
+  )
 }
 
 export default History;

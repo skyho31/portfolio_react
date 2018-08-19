@@ -129,7 +129,7 @@
         border-radius: 8px;
         position: absolute;
         background-color: white;
-        left: calc(50% - 6px);
+        // left: calc(2em - 5px);
     
         &.two {
             margin-top: 50px;
@@ -151,17 +151,15 @@
     }
     
     .listYear {
-        
+        color: #ff6666;
         font-family: initial;
         margin: 0;
         display: inline-block;
         &.left {
-            color:cornflowerblue;
             padding-left: 5px;
         }
     
         &.right {
-            color: #ff6666;
             padding-right: 5px;
         }
     }
