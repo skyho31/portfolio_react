@@ -105,7 +105,7 @@
         "imgPath": "./imgs/bootstrap.jpg"
       },
       {
-        "name": "React & React-native",
+        "name": "React",
         "imgPath": "./imgs/react.jpg"
       },
       {
@@ -132,6 +132,10 @@
       {
         "name": "C++",
         "imgPath": "./imgs/c++.png"
+      },
+      {
+        "name": "webpack",
+        "imgPath": "./imgs/webpack.png"
       }
     ]
   }
