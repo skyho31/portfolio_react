@@ -1,7 +1,6 @@
 import React from 'react';
 
 const SkillBox = ({skill}) => {
-	console.log(skill)
 	return (
 		<div>
 			<div className="works skillBox">

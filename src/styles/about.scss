@@ -20,6 +20,9 @@
 
         &.start {
             text-align: center;
+            p {
+                padding :10px;
+            }
         }
 
         &.skillBox {
@@ -98,7 +101,7 @@
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 
     ul {
         margin-top: 0;
@@ -129,7 +132,6 @@
         border-radius: 8px;
         position: absolute;
         background-color: white;
-        // left: calc(2em - 5px);
     
         &.two {
             margin-top: 50px;

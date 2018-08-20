@@ -13,15 +13,15 @@ import {
 } from 'react-router-dom';
 
 const pathName = {
-  "/" : 'WORKS',
-  "/about" : 'ABOUT',
-  "/contact" : 'CONTACT'
+  "" : 'WORKS',
+  "about" : 'ABOUT',
+  "contact" : 'CONTACT'
 }
 
 class App extends Component {  
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="App" ref="main" onScroll={this.scrollTop}>
           <Header />
           <Switch>
@@ -76,7 +76,8 @@ class Header extends Component {
     return (
       <header>
         <section className="topbar">
-          <span className="pageTitle">{pathName[window.location.pathname]}</span>
+          <span className="pageTitle">{pathName[window.location.pathname.split('/').slice(-1)
+]}</span>
           <div className={menuBoxClasses.join(' ')} onClick={this.toggleMenu}>
             <span id="customButton"></span>
           </div>
